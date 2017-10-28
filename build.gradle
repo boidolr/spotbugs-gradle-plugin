@@ -65,3 +65,8 @@ tasks.publishPlugins.doFirst {
     throw new StopExecutionException("Skip publishing Gradle plugin because SpotBugs version is not stable: ${spotBugsVersion}")
   }
 }
+
+wrapper {
+  gradleVersion = '4.1'
+  distributionType = Wrapper.DistributionType.ALL
+}
